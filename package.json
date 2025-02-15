@@ -1,19 +1,20 @@
 {
-  "name": "video-transcoder",
-  "module": "src/index.ts",
-  "type": "module",
-  "scripts": {
-    "upload": "bun run src/uploader.ts"
-  },
-  "devDependencies": {
-    "@types/bun": "latest",
-    "@types/amqplib": "^0.10.6"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "dependencies": {
-    "@aws-sdk/client-s3": "^3.744.0",
-    "amqplib": "^0.10.5"
-  }
+	"name": "video-transcoder",
+	"module": "src/index.ts",
+	"type": "module",
+	"scripts": {
+		"upload": "bun run src/uploader.ts"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@types/amqplib": "^0.10.6",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"dependencies": {
+		"@aws-sdk/client-s3": "^3.744.0",
+		"amqplib": "^0.10.5"
+	}
 }
