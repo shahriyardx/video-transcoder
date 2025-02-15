@@ -1,0 +1,17 @@
+{
+  "name": "consumer",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/amqplib": "^0.10.6",
+    "@types/bun": "latest",
+    "@types/dockerode": "^3.3.34"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.5",
+    "dockerode": "^4.0.4"
+  }
+}

@@ -1,0 +1,30 @@
+services:
+    s3mock:
+        image: adobe/s3mock
+        container_name: s3mock
+        environment:
+            - initialBuckets=temp,prod
+            - root=app
+        ports:
+            - "9090:9090"
+            - "9191:9191"
+        volumes:
+            - ./s3:/app
+        networks:
+            - vt
+    rabbitmq:
+        image: "rabbitmq:3-management"
+        ports:
+            - "5672:5672"
+            - "15672:15672"
+        environment:
+            RABBITMQ_DEFAULT_USER: "guest"
+            RABBITMQ_DEFAULT_PASS: "guest"
+        networks:
+            - vt
+
+
+networks:
+    vt:
+       driver: bridge
+       name: vt
