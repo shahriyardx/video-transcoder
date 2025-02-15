@@ -2,8 +2,8 @@ import { S3Client, GetObjectCommand, PutObjectCommand } from "@aws-sdk/client-s3
 import { writeFile } from "fs/promises"
 import ffmpeg_installer from "@ffmpeg-installer/ffmpeg"
 import ffmpeg from "fluent-ffmpeg"
-import path from "node:path"
-import fs from "node:fs"
+import path from "path"
+import fs from "fs"
 
 ffmpeg.setFfmpegPath(ffmpeg_installer.path)
 
